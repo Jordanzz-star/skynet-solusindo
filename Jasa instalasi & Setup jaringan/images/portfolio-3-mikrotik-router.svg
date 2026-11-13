@@ -1,0 +1,260 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050814"/>
+      <stop offset="50%" stop-color="#0a1228"/>
+      <stop offset="100%" stop-color="#04060f"/>
+    </linearGradient>
+
+    <!-- Metal Chassis -->
+    <linearGradient id="chassisGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="3%" stop-color="#334155"/>
+      <stop offset="8%" stop-color="#1e293b"/>
+      <stop offset="95%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+
+    <!-- LCD Glow -->
+    <linearGradient id="lcdScreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06182c"/>
+      <stop offset="100%" stop-color="#020c18"/>
+    </linearGradient>
+
+    <!-- Traffic Waveform Gradient -->
+    <linearGradient id="trafficWave" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#2563eb" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="glowM" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="strongGlowM" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <pattern id="hexGrid" width="30" height="26" patternUnits="userSpaceOnUse">
+      <path d="M 15 0 L 30 8.66 L 30 26 L 15 34.66 L 0 26 L 0 8.66 Z" fill="none" stroke="#00f0ff" stroke-width="0.5" stroke-opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <!-- Deep Canvas -->
+  <rect width="800" height="500" fill="url(#bgGrad3)"/>
+  <rect width="800" height="500" fill="url(#hexGrid)"/>
+
+  <!-- Glowing Background Orbs -->
+  <circle cx="280" cy="180" r="160" fill="#00f0ff" opacity="0.08" filter="url(#strongGlowM)"/>
+  <circle cx="600" cy="300" r="180" fill="#2563eb" opacity="0.12" filter="url(#strongGlowM)"/>
+
+  <!-- TOP HARDWARE UNIT: MIKROTIK CCR RACKMOUNT ROUTER -->
+  <g transform="translate(60, 45)">
+    <!-- 1U Chassis Body -->
+    <rect x="0" y="0" width="680" height="130" rx="6" fill="url(#chassisGrad)" stroke="#1e2e4d" stroke-width="2"/>
+    <rect x="2" y="2" width="676" height="126" rx="4" fill="none" stroke="#00f0ff" stroke-width="0.8" stroke-opacity="0.3"/>
+
+    <!-- Left Rack Ear Mounting Bracket -->
+    <rect x="0" y="0" width="22" height="130" fill="#0b1220" stroke="#1f2d47" stroke-width="1"/>
+    <circle cx="11" cy="25" r="4" fill="#050811" stroke="#334155" stroke-width="1.5"/>
+    <circle cx="11" cy="105" r="4" fill="#050811" stroke="#334155" stroke-width="1.5"/>
+
+    <!-- Right Rack Ear Mounting Bracket -->
+    <rect x="658" y="0" width="22" height="130" fill="#0b1220" stroke="#1f2d47" stroke-width="1"/>
+    <circle cx="669" cy="25" r="4" fill="#050811" stroke="#334155" stroke-width="1.5"/>
+    <circle cx="669" cy="105" r="4" fill="#050811" stroke="#334155" stroke-width="1.5"/>
+
+    <!-- MikroTik Logo & Routerboard Brand -->
+    <g transform="translate(35, 20)">
+      <!-- MikroTik White Logo Graphic -->
+      <rect x="0" y="2" width="6" height="18" fill="#ffffff" rx="1"/>
+      <rect x="10" y="2" width="6" height="18" fill="#ffffff" rx="1"/>
+      <rect x="20" y="2" width="6" height="18" fill="#ffffff" rx="1"/>
+      <path d="M 0 2 L 13 14 L 26 2" stroke="#ffffff" stroke-width="2.5" fill="none"/>
+      
+      <text x="36" y="16" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="14" font-weight="900" letter-spacing="0.5">MikroTik</text>
+      <text x="36" y="29" fill="#00f0ff" font-family="'Outfit', sans-serif" font-size="9" font-weight="700" letter-spacing="1">RouterBOARD CCR1036-8G-2S+</text>
+    </g>
+
+    <!-- Color Touchscreen LCD Display (Center-Left) -->
+    <g transform="translate(240, 18)">
+      <rect x="0" y="0" width="165" height="92" rx="4" fill="url(#lcdScreen)" stroke="#00f0ff" stroke-width="1.5" filter="url(#glowM)"/>
+      
+      <!-- LCD Header -->
+      <rect x="0" y="0" width="165" height="16" rx="4" fill="#0a1930"/>
+      <text x="8" y="11" fill="#38bdf8" font-family="'Outfit', sans-serif" font-size="7.5" font-weight="800">MikroTik RouterOS v7.14</text>
+      <circle cx="152" cy="8" r="2.5" fill="#10b981" filter="url(#glowM)"/>
+
+      <!-- LCD Telemetry Stats -->
+      <text x="8" y="30" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="7">CPU LOAD (36 CORES):</text>
+      <text x="110" y="30" fill="#10b981" font-family="'Outfit', sans-serif" font-size="8" font-weight="800">14%</text>
+
+      <text x="8" y="44" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="7">WAN 1 (ISP 1):</text>
+      <text x="75" y="44" fill="#00f0ff" font-family="'Outfit', sans-serif" font-size="7.5" font-weight="700">ONLINE (500M)</text>
+
+      <text x="8" y="58" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="7">WAN 2 (ISP 2):</text>
+      <text x="75" y="58" fill="#10b981" font-family="'Outfit', sans-serif" font-size="7.5" font-weight="700">ONLINE (300M)</text>
+
+      <text x="8" y="72" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="7">LOAD BALANCE:</text>
+      <text x="82" y="72" fill="#facc15" font-family="'Outfit', sans-serif" font-size="7.5" font-weight="800">PCC ACTIVE</text>
+
+      <!-- Mini Sparkline in LCD -->
+      <path d="M 8 85 L 30 82 L 50 84 L 75 79 L 100 82 L 130 77 L 155 79" stroke="#00f0ff" stroke-width="1.2" fill="none"/>
+    </g>
+
+    <!-- Gigabit Ethernet Ports WAN & LAN (Center-Right) -->
+    <g transform="translate(425, 25)">
+      <!-- Port Labels -->
+      <text x="4" y="0" fill="#f87171" font-family="'Outfit', sans-serif" font-size="7.5" font-weight="800">WAN 1</text>
+      <text x="44" y="0" fill="#f87171" font-family="'Outfit', sans-serif" font-size="7.5" font-weight="800">WAN 2</text>
+      <text x="86" y="0" fill="#38bdf8" font-family="'Outfit', sans-serif" font-size="7.5" font-weight="800">LAN 1</text>
+      <text x="126" y="0" fill="#38bdf8" font-family="'Outfit', sans-serif" font-size="7.5" font-weight="800">LAN 2</text>
+      <text x="166" y="0" fill="#38bdf8" font-family="'Outfit', sans-serif" font-size="7.5" font-weight="800">LAN 3</text>
+
+      <!-- RJ45 Ports Housing -->
+      <g fill="#070c17" stroke="#1f2d47" stroke-width="1">
+        <rect x="0" y="8" width="34" height="28" rx="2"/>
+        <rect x="40" y="8" width="34" height="28" rx="2"/>
+        <rect x="80" y="8" width="34" height="28" rx="2"/>
+        <rect x="120" y="8" width="34" height="28" rx="2"/>
+        <rect x="160" y="8" width="34" height="28" rx="2"/>
+      </g>
+
+      <!-- RJ45 Inner Jack & Cable Boot -->
+      <rect x="6" y="14" width="22" height="18" fill="#1e293b" stroke="#00f0ff" stroke-width="0.8"/>
+      <rect x="46" y="14" width="22" height="18" fill="#1e293b" stroke="#00f0ff" stroke-width="0.8"/>
+      <rect x="86" y="14" width="22" height="18" fill="#1e293b" stroke="#00f0ff" stroke-width="0.8"/>
+      <rect x="126" y="14" width="22" height="18" fill="#1e293b" stroke="#00f0ff" stroke-width="0.8"/>
+      <rect x="166" y="14" width="22" height="18" fill="#1e293b" stroke="#00f0ff" stroke-width="0.8"/>
+
+      <!-- Activity LEDs (Blinking Green & Cyan) -->
+      <circle cx="12" cy="42" r="2" fill="#10b981" filter="url(#glowM)"/>
+      <circle cx="24" cy="42" r="2" fill="#00f0ff" filter="url(#glowM)"/>
+      <circle cx="52" cy="42" r="2" fill="#10b981" filter="url(#glowM)"/>
+      <circle cx="64" cy="42" r="2" fill="#00f0ff" filter="url(#glowM)"/>
+      <circle cx="92" cy="42" r="2" fill="#10b981" filter="url(#glowM)"/>
+      <circle cx="104" cy="42" r="2" fill="#00f0ff" filter="url(#glowM)"/>
+      <circle cx="132" cy="42" r="2" fill="#10b981" filter="url(#glowM)"/>
+      <circle cx="144" cy="42" r="2" fill="#00f0ff" filter="url(#glowM)"/>
+      <circle cx="172" cy="42" r="2" fill="#10b981" filter="url(#glowM)"/>
+      <circle cx="184" cy="42" r="2" fill="#00f0ff" filter="url(#glowM)"/>
+
+      <text x="0" y="62" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="7">PCC Dual-ISP</text>
+      <text x="80" y="62" fill="#38bdf8" font-family="'Plus Jakarta Sans', sans-serif" font-size="7">Trunk VLAN (Hotspot, Staff, POS)</text>
+    </g>
+
+    <!-- Dual SFP+ 10G Cages (Far Right) -->
+    <g transform="translate(640, 32)">
+      <rect x="-10" y="0" width="22" height="42" rx="2" fill="#060912" stroke="#00f0ff" stroke-width="1"/>
+      <circle cx="1" cy="50" r="2" fill="#00f0ff" filter="url(#glowM)"/>
+    </g>
+  </g>
+
+  <!-- LOWER GRAPHIC: REALTIME DUAL-ISP LOAD BALANCING & BANDWIDTH TELEMETRY -->
+  <g transform="translate(60, 195)">
+    <!-- Monitoring Console Container -->
+    <rect x="0" y="0" width="680" height="245" rx="8" fill="rgba(8, 15, 30, 0.85)" stroke="#1a2b4c" stroke-width="1.5"/>
+    <rect x="2" y="2" width="676" height="241" rx="6" fill="none" stroke="#00f0ff" stroke-width="0.8" stroke-opacity="0.3"/>
+
+    <!-- Header Bar -->
+    <rect x="0" y="0" width="680" height="34" rx="8" fill="#0c172b"/>
+    <text x="18" y="22" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="12" font-weight="800">MIKROTIK TRAFFIC MONITOR &amp; FAILOVER REDUNDANCY</text>
+    
+    <g transform="translate(520, 12)">
+      <circle cx="0" cy="8" r="4" fill="#10b981" filter="url(#glowM)"/>
+      <text x="10" y="11" fill="#10b981" font-family="'Outfit', sans-serif" font-size="10" font-weight="700">FAILOVER STATUS: ZERO LOSS</text>
+    </g>
+
+    <!-- Left Box: DUAL-ISP ARCHITECTURE DIAGRAM -->
+    <g transform="translate(20, 50)">
+      <!-- ISP 1 Node -->
+      <rect x="0" y="0" width="135" height="40" rx="5" fill="#0c1830" stroke="#00f0ff" stroke-width="1.2"/>
+      <circle cx="16" cy="20" r="5" fill="#10b981" filter="url(#glowM)"/>
+      <text x="30" y="17" fill="#fff" font-family="'Outfit', sans-serif" font-size="9" font-weight="800">ISP 1 (BIZNET)</text>
+      <text x="30" y="29" fill="#00f0ff" font-family="'Plus Jakarta Sans', sans-serif" font-size="8">500 Mbps • Latency 4ms</text>
+
+      <!-- ISP 2 Node -->
+      <rect x="0" y="65" width="135" height="40" rx="5" fill="#0c1830" stroke="#2563eb" stroke-width="1.2"/>
+      <circle cx="16" cy="85" r="5" fill="#10b981" filter="url(#glowM)"/>
+      <text x="30" y="82" fill="#fff" font-family="'Outfit', sans-serif" font-size="9" font-weight="800">ISP 2 (INDIHOME)</text>
+      <text x="30" y="94" fill="#38bdf8" font-family="'Plus Jakarta Sans', sans-serif" font-size="8">300 Mbps • Standby / PCC</text>
+
+      <!-- Convergence Arrows to MikroTik -->
+      <path d="M 135 20 L 175 45" stroke="#00f0ff" stroke-width="2" fill="none" stroke-dasharray="4 3"/>
+      <path d="M 135 85 L 175 60" stroke="#38bdf8" stroke-width="2" fill="none" stroke-dasharray="4 3"/>
+
+      <!-- PCC Engine Core Box -->
+      <rect x="175" y="32" width="105" height="45" rx="5" fill="#061224" stroke="#00f0ff" stroke-width="1.5" filter="url(#glowM)"/>
+      <text x="185" y="50" fill="#fff" font-family="'Outfit', sans-serif" font-size="9" font-weight="800">PCC LOAD BALANCER</text>
+      <text x="185" y="65" fill="#10b981" font-family="'Plus Jakarta Sans', sans-serif" font-size="8">Auto Failover 0s</text>
+
+      <!-- Security Shield Badge -->
+      <g transform="translate(0, 125)">
+        <rect x="0" y="0" width="280" height="45" rx="5" fill="#071020" stroke="#1e2e4e" stroke-width="1"/>
+        <text x="14" y="18" fill="#38bdf8" font-family="'Outfit', sans-serif" font-size="9" font-weight="700">FIREWALL &amp; SECURITY RULES ACTIVE</text>
+        <text x="14" y="32" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="8">Anti-Brute Force • Isolasi Port Client • Hotspot Voucher</text>
+      </g>
+    </g>
+
+    <!-- Right Box: DYNAMIC LIVE BANDWIDTH GRAPH -->
+    <g transform="translate(325, 48)">
+      <rect x="0" y="0" width="335" height="180" rx="6" fill="#050a16" stroke="#162540" stroke-width="1"/>
+      
+      <!-- Graph Header -->
+      <text x="14" y="20" fill="#94a3b8" font-family="'Outfit', sans-serif" font-size="9" font-weight="700">AGGREGATE BANDWIDTH THROUGHPUT (TX / RX)</text>
+      <text x="260" y="20" fill="#00f0ff" font-family="'Outfit', sans-serif" font-size="11" font-weight="800">785 Mbps</text>
+
+      <!-- Grid lines -->
+      <g stroke="#1a2947" stroke-width="0.5" stroke-dasharray="3 3">
+        <line x1="15" y1="45" x2="320" y2="45"/>
+        <line x1="15" y1="80" x2="320" y2="80"/>
+        <line x1="15" y1="115" x2="320" y2="115"/>
+        <line x1="15" y1="150" x2="320" y2="150"/>
+      </g>
+
+      <!-- Waveform Fill Area -->
+      <path d="M 15 150 
+               L 15 110 
+               Q 45 70 80 95 
+               T 145 60 
+               T 210 85 
+               T 275 45 
+               L 320 65 
+               L 320 150 Z" 
+            fill="url(#trafficWave)"/>
+
+      <!-- Neon Top Line -->
+      <path d="M 15 110 
+               Q 45 70 80 95 
+               T 145 60 
+               T 210 85 
+               T 275 45 
+               L 320 65" 
+            stroke="#00f0ff" stroke-width="2.5" fill="none" filter="url(#glowM)"/>
+
+      <!-- QoS Priority Queue Labels -->
+      <g transform="translate(15, 160)">
+        <rect x="0" y="0" width="8" height="8" rx="2" fill="#10b981"/>
+        <text x="12" y="7" fill="#cbd5e1" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5">Kasir/POS (High)</text>
+
+        <rect x="100" y="0" width="8" height="8" rx="2" fill="#00f0ff"/>
+        <text x="112" y="7" fill="#cbd5e1" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5">Staff &amp; ERP (Normal)</text>
+
+        <rect x="215" y="0" width="8" height="8" rx="2" fill="#facc15"/>
+        <text x="227" y="7" fill="#cbd5e1" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5">Guest Hotspot (Limited)</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom Accent Bar -->
+  <rect x="0" y="495" width="800" height="5" fill="linear-gradient(90deg, #00f0ff, #2563eb, #00f0ff)"/>
+</svg>

@@ -1,0 +1,316 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050813"/>
+      <stop offset="50%" stop-color="#0a1226"/>
+      <stop offset="100%" stop-color="#060b18"/>
+    </linearGradient>
+
+    <!-- Electric Cyan Gradient -->
+    <linearGradient id="electricGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#2563eb" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <!-- Server Rack Metal Gradient -->
+    <linearGradient id="rackMetal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0b1325"/>
+      <stop offset="10%" stop-color="#16223d"/>
+      <stop offset="90%" stop-color="#16223d"/>
+      <stop offset="100%" stop-color="#0b1325"/>
+    </linearGradient>
+
+    <linearGradient id="panelFace" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#172442"/>
+      <stop offset="100%" stop-color="#0e172e"/>
+    </linearGradient>
+
+    <linearGradient id="cableBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="strongGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="techGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00f0ff" stroke-width="0.5" stroke-opacity="0.08"/>
+      <circle cx="0" cy="0" r="1.5" fill="#00f0ff" fill-opacity="0.25"/>
+    </pattern>
+  </defs>
+
+  <!-- Deep Cosmic Navy Background -->
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+  <rect width="800" height="500" fill="url(#techGrid)"/>
+
+  <!-- Ambient Light Halos -->
+  <circle cx="400" cy="250" r="220" fill="#00f0ff" opacity="0.06" filter="url(#strongGlow)"/>
+  <circle cx="260" cy="180" r="140" fill="#2563eb" opacity="0.12" filter="url(#strongGlow)"/>
+
+  <!-- Circuit Trace Lines in Background -->
+  <g stroke="#00f0ff" stroke-opacity="0.2" stroke-width="1.5" fill="none">
+    <path d="M 60 80 L 180 80 L 220 120 L 220 380 L 260 420 L 320 420" stroke-dasharray="6 4"/>
+    <path d="M 740 100 L 620 100 L 580 140 L 580 360 L 540 400 L 480 400" stroke-dasharray="6 4"/>
+    <circle cx="60" cy="80" r="4" fill="#00f0ff" opacity="0.5"/>
+    <circle cx="740" cy="100" r="4" fill="#00f0ff" opacity="0.5"/>
+  </g>
+
+  <!-- Server Rack Frame (42U Aesthetic) -->
+  <g transform="translate(140, 40)">
+    <!-- Main Outer Rack Body -->
+    <rect x="0" y="0" width="520" height="420" rx="10" fill="url(#rackMetal)" stroke="#1e2e4f" stroke-width="3"/>
+    <rect x="2" y="2" width="516" height="416" rx="8" fill="none" stroke="#00f0ff" stroke-width="1" stroke-opacity="0.3"/>
+
+    <!-- Left & Right Vertical Mounting Rails (19" Standard) -->
+    <rect x="18" y="15" width="28" height="390" fill="#0b1220" stroke="#1f2d47" stroke-width="1.5"/>
+    <rect x="474" y="15" width="28" height="390" fill="#0b1220" stroke="#1f2d47" stroke-width="1.5"/>
+
+    <!-- Rack Unit Number Marks & Square Cage Nut Holes -->
+    <g fill="#38bdf8" opacity="0.4" font-family="'Outfit', sans-serif" font-size="9" font-weight="600">
+      <text x="24" y="60">42U</text>
+      <text x="24" y="140">38U</text>
+      <text x="24" y="220">32U</text>
+      <text x="24" y="300">24U</text>
+      <text x="24" y="380">16U</text>
+
+      <text x="480" y="60">42U</text>
+      <text x="480" y="140">38U</text>
+      <text x="480" y="220">32U</text>
+      <text x="480" y="300">24U</text>
+      <text x="480" y="380">16U</text>
+    </g>
+
+    <!-- UNIT 1: CAT6 PATCH PANEL 24-PORT (Top) -->
+    <g transform="translate(56, 35)">
+      <rect x="0" y="0" width="408" height="52" rx="4" fill="url(#panelFace)" stroke="#00f0ff" stroke-width="1" stroke-opacity="0.4"/>
+      <!-- Label Strip -->
+      <rect x="10" y="8" width="388" height="10" rx="2" fill="#070c18" stroke="#1a2742" stroke-width="1"/>
+      <text x="20" y="16" fill="#38bdf8" font-family="'Outfit', sans-serif" font-size="7.5" font-weight="700" letter-spacing="1">SKYNET SOLUSINDO - 24P CAT6 PATCH PANEL EIA/TIA-568B</text>
+
+      <!-- 24 RJ45 Jack Ports (Grouped in 4s) -->
+      <g transform="translate(14, 24)">
+        <!-- Port Bank 1 -->
+        <rect x="0" y="0" width="55" height="20" rx="2" fill="#080e1b" stroke="#1f2e4d" stroke-width="1"/>
+        <rect x="6" y="4" width="9" height="12" fill="#050811" stroke="#00f0ff" stroke-width="0.8"/>
+        <rect x="19" y="4" width="9" height="12" fill="#050811" stroke="#00f0ff" stroke-width="0.8"/>
+        <rect x="32" y="4" width="9" height="12" fill="#050811" stroke="#00f0ff" stroke-width="0.8"/>
+        <circle cx="10" cy="2" r="1.5" fill="#10b981" filter="url(#glow)"/>
+        <circle cx="23" cy="2" r="1.5" fill="#10b981" filter="url(#glow)"/>
+        <circle cx="36" cy="2" r="1.5" fill="#10b981" filter="url(#glow)"/>
+
+        <!-- Port Bank 2 -->
+        <rect x="65" y="0" width="55" height="20" rx="2" fill="#080e1b" stroke="#1f2e4d" stroke-width="1"/>
+        <rect x="71" y="4" width="9" height="12" fill="#050811" stroke="#00f0ff" stroke-width="0.8"/>
+        <rect x="84" y="4" width="9" height="12" fill="#050811" stroke="#00f0ff" stroke-width="0.8"/>
+        <rect x="97" y="4" width="9" height="12" fill="#050811" stroke="#00f0ff" stroke-width="0.8"/>
+        <circle cx="75" cy="2" r="1.5" fill="#10b981" filter="url(#glow)"/>
+        <circle cx="88" cy="2" r="1.5" fill="#10b981" filter="url(#glow)"/>
+        <circle cx="101" cy="2" r="1.5" fill="#10b981" filter="url(#glow)"/>
+
+        <!-- Port Bank 3 -->
+        <rect x="130" y="0" width="55" height="20" rx="2" fill="#080e1b" stroke="#1f2e4d" stroke-width="1"/>
+        <rect x="136" y="4" width="9" height="12" fill="#050811" stroke="#00f0ff" stroke-width="0.8"/>
+        <rect x="149" y="4" width="9" height="12" fill="#050811" stroke="#00f0ff" stroke-width="0.8"/>
+        <rect x="162" y="4" width="9" height="12" fill="#050811" stroke="#00f0ff" stroke-width="0.8"/>
+        <circle cx="140" cy="2" r="1.5" fill="#10b981" filter="url(#glow)"/>
+        <circle cx="153" cy="2" r="1.5" fill="#10b981" filter="url(#glow)"/>
+        <circle cx="166" cy="2" r="1.5" fill="#10b981" filter="url(#glow)"/>
+
+        <!-- Port Bank 4 -->
+        <rect x="195" y="0" width="55" height="20" rx="2" fill="#080e1b" stroke="#1f2e4d" stroke-width="1"/>
+        <rect x="201" y="4" width="9" height="12" fill="#050811" stroke="#00f0ff" stroke-width="0.8"/>
+        <rect x="214" y="4" width="9" height="12" fill="#050811" stroke="#00f0ff" stroke-width="0.8"/>
+        <rect x="227" y="4" width="9" height="12" fill="#050811" stroke="#00f0ff" stroke-width="0.8"/>
+        <circle cx="205" cy="2" r="1.5" fill="#10b981" filter="url(#glow)"/>
+        <circle cx="218" cy="2" r="1.5" fill="#10b981" filter="url(#glow)"/>
+        <circle cx="231" cy="2" r="1.5" fill="#10b981" filter="url(#glow)"/>
+
+        <!-- Port Bank 5 & 6 -->
+        <rect x="260" y="0" width="55" height="20" rx="2" fill="#080e1b" stroke="#1f2e4d" stroke-width="1"/>
+        <rect x="266" y="4" width="9" height="12" fill="#050811" stroke="#00f0ff" stroke-width="0.8"/>
+        <rect x="279" y="4" width="9" height="12" fill="#050811" stroke="#00f0ff" stroke-width="0.8"/>
+        <rect x="292" y="4" width="9" height="12" fill="#050811" stroke="#00f0ff" stroke-width="0.8"/>
+        <circle cx="270" cy="2" r="1.5" fill="#10b981" filter="url(#glow)"/>
+        <circle cx="283" cy="2" r="1.5" fill="#10b981" filter="url(#glow)"/>
+        <circle cx="296" cy="2" r="1.5" fill="#10b981" filter="url(#glow)"/>
+
+        <rect x="325" y="0" width="55" height="20" rx="2" fill="#080e1b" stroke="#1f2e4d" stroke-width="1"/>
+        <rect x="331" y="4" width="9" height="12" fill="#050811" stroke="#00f0ff" stroke-width="0.8"/>
+        <rect x="344" y="4" width="9" height="12" fill="#050811" stroke="#00f0ff" stroke-width="0.8"/>
+        <rect x="357" y="4" width="9" height="12" fill="#050811" stroke="#00f0ff" stroke-width="0.8"/>
+        <circle cx="335" cy="2" r="1.5" fill="#10b981" filter="url(#glow)"/>
+        <circle cx="348" cy="2" r="1.5" fill="#10b981" filter="url(#glow)"/>
+        <circle cx="361" cy="2" r="1.5" fill="#10b981" filter="url(#glow)"/>
+      </g>
+    </g>
+
+    <!-- HORIZONTAL CABLE MANAGEMENT DUCT (Middle) -->
+    <g transform="translate(56, 97)">
+      <rect x="0" y="0" width="408" height="28" rx="3" fill="#0e172a" stroke="#1e293b" stroke-width="1"/>
+      <!-- Cable pass-through slots -->
+      <g fill="#070b14" stroke="#00f0ff" stroke-width="0.5" stroke-opacity="0.3">
+        <rect x="18" y="6" width="22" height="16" rx="2"/>
+        <rect x="52" y="6" width="22" height="16" rx="2"/>
+        <rect x="86" y="6" width="22" height="16" rx="2"/>
+        <rect x="120" y="6" width="22" height="16" rx="2"/>
+        <rect x="154" y="6" width="22" height="16" rx="2"/>
+        <rect x="188" y="6" width="22" height="16" rx="2"/>
+        <rect x="222" y="6" width="22" height="16" rx="2"/>
+        <rect x="256" y="6" width="22" height="16" rx="2"/>
+        <rect x="290" y="6" width="22" height="16" rx="2"/>
+        <rect x="324" y="6" width="22" height="16" rx="2"/>
+        <rect x="358" y="6" width="22" height="16" rx="2"/>
+      </g>
+    </g>
+
+    <!-- UNIT 2: 48-PORT GIGABIT MANAGED SWITCH (Lower) -->
+    <g transform="translate(56, 135)">
+      <rect x="0" y="0" width="408" height="60" rx="4" fill="url(#panelFace)" stroke="#00f0ff" stroke-width="1.2" stroke-opacity="0.6"/>
+      <!-- Status LEDs & Brand Branding -->
+      <text x="14" y="16" fill="#fff" font-family="'Outfit', sans-serif" font-size="9" font-weight="800">CISCO CATALYST GIGABIT</text>
+      <text x="130" y="16" fill="#00f0ff" font-family="'Outfit', sans-serif" font-size="8" font-weight="600">48-PORT POE+ SFP 10G</text>
+
+      <!-- System status green light -->
+      <circle cx="280" cy="14" r="2.5" fill="#10b981" filter="url(#glow)"/>
+      <text x="288" y="16" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="7">PWR/SYS</text>
+      <circle cx="330" cy="14" r="2.5" fill="#00f0ff" filter="url(#glow)"/>
+      <text x="338" y="16" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="7">LINK/ACT</text>
+
+      <!-- Dual Row 48 RJ45 Ports with blinking LEDs -->
+      <g transform="translate(14, 25)">
+        <!-- Row 1 & 2 Port Matrix -->
+        <g fill="#070c16" stroke="#00f0ff" stroke-width="0.6">
+          <!-- 12 dual stacked port blocks -->
+          <rect x="0" y="0" width="26" height="26" rx="1.5"/>
+          <rect x="30" y="0" width="26" height="26" rx="1.5"/>
+          <rect x="60" y="0" width="26" height="26" rx="1.5"/>
+          <rect x="90" y="0" width="26" height="26" rx="1.5"/>
+          <rect x="120" y="0" width="26" height="26" rx="1.5"/>
+          <rect x="150" y="0" width="26" height="26" rx="1.5"/>
+          <rect x="180" y="0" width="26" height="26" rx="1.5"/>
+          <rect x="210" y="0" width="26" height="26" rx="1.5"/>
+          <rect x="240" y="0" width="26" height="26" rx="1.5"/>
+          <rect x="270" y="0" width="26" height="26" rx="1.5"/>
+          <rect x="300" y="0" width="26" height="26" rx="1.5"/>
+          <rect x="330" y="0" width="26" height="26" rx="1.5"/>
+        </g>
+        <!-- Activity Blinking LEDs (Green & Cyan) -->
+        <g fill="#10b981" filter="url(#glow)">
+          <circle cx="6" cy="4" r="1.5"/><circle cx="18" cy="4" r="1.5"/>
+          <circle cx="36" cy="4" r="1.5"/><circle cx="48" cy="4" r="1.5"/>
+          <circle cx="66" cy="4" r="1.5"/><circle cx="78" cy="4" r="1.5"/>
+          <circle cx="96" cy="4" r="1.5"/><circle cx="108" cy="4" r="1.5"/>
+          <circle cx="126" cy="4" r="1.5"/><circle cx="138" cy="4" r="1.5"/>
+          <circle cx="156" cy="4" r="1.5"/><circle cx="168" cy="4" r="1.5"/>
+          <circle cx="186" cy="4" r="1.5"/><circle cx="198" cy="4" r="1.5"/>
+          <circle cx="216" cy="4" r="1.5"/><circle cx="228" cy="4" r="1.5"/>
+          <circle cx="246" cy="4" r="1.5"/><circle cx="258" cy="4" r="1.5"/>
+          <circle cx="276" cy="4" r="1.5"/><circle cx="288" cy="4" r="1.5"/>
+          <circle cx="306" cy="4" r="1.5"/><circle cx="318" cy="4" r="1.5"/>
+          <circle cx="336" cy="4" r="1.5"/><circle cx="348" cy="4" r="1.5"/>
+        </g>
+        <!-- 4 SFP+ 10G Uplink Cages (Right side) -->
+        <rect x="365" y="4" width="32" height="20" rx="2" fill="#03060c" stroke="#00f0ff" stroke-width="1"/>
+        <rect x="369" y="8" width="10" height="12" fill="#00f0ff" opacity="0.3"/>
+        <rect x="383" y="8" width="10" height="12" fill="#00f0ff" opacity="0.3"/>
+        <circle cx="374" cy="22" r="1" fill="#00f0ff" filter="url(#glow)"/>
+        <circle cx="388" cy="22" r="1" fill="#00f0ff" filter="url(#glow)"/>
+      </g>
+    </g>
+
+    <!-- REALISTIC CURVED BLUE CAT6 CABLE LOOPS (Patching between Panel & Switch) -->
+    <g stroke="url(#cableBlue)" stroke-width="3.5" fill="none" opacity="0.95" stroke-linecap="round">
+      <path d="M 75 58 C 75 75, 78 85, 78 100 C 78 120, 80 130, 80 155"/>
+      <path d="M 90 58 C 90 75, 95 85, 95 100 C 95 120, 92 130, 92 155"/>
+      <path d="M 105 58 C 105 78, 110 88, 110 100 C 110 118, 108 132, 108 155"/>
+      <path d="M 120 58 C 120 78, 128 88, 128 100 C 128 118, 122 132, 122 155"/>
+
+      <path d="M 145 58 C 145 76, 155 86, 155 100 C 155 120, 142 130, 142 155"/>
+      <path d="M 160 58 C 160 76, 170 86, 170 100 C 170 120, 156 130, 156 155"/>
+      <path d="M 175 58 C 175 78, 185 88, 185 100 C 185 118, 172 132, 172 155"/>
+
+      <path d="M 215 58 C 215 76, 225 86, 225 100 C 225 120, 205 130, 205 155"/>
+      <path d="M 230 58 C 230 76, 240 86, 240 100 C 240 120, 220 130, 220 155"/>
+      <path d="M 245 58 C 245 78, 255 88, 255 100 C 255 118, 235 132, 235 155"/>
+
+      <path d="M 285 58 C 285 76, 295 86, 295 100 C 295 120, 268 130, 268 155"/>
+      <path d="M 300 58 C 300 76, 310 86, 310 100 C 310 120, 282 130, 282 155"/>
+      <path d="M 315 58 C 315 78, 325 88, 325 100 C 325 118, 298 132, 298 155"/>
+
+      <path d="M 355 58 C 355 76, 365 86, 365 100 C 365 120, 330 130, 330 155"/>
+      <path d="M 370 58 C 370 76, 380 86, 380 100 C 380 120, 345 130, 345 155"/>
+      <path d="M 385 58 C 385 78, 395 88, 395 100 C 395 118, 360 132, 360 155"/>
+    </g>
+
+    <!-- UNIT 3: SERVER SHELF WITH FIBER OPTIC PATCH LEADS -->
+    <g transform="translate(56, 205)">
+      <rect x="0" y="0" width="408" height="85" rx="4" fill="url(#panelFace)" stroke="#1e2e4f" stroke-width="1"/>
+      <text x="14" y="20" fill="#94a3b8" font-family="'Outfit', sans-serif" font-size="8" font-weight="700">OPTICAL DISTRIBUTION &amp; TERMINATION (ODF)</text>
+      <!-- Dual Yellow Singlemode Fiber Jumpers -->
+      <path d="M 40 40 C 90 80, 180 80, 240 45" stroke="#facc15" stroke-width="2.5" fill="none" opacity="0.9"/>
+      <path d="M 50 45 C 100 85, 190 85, 250 50" stroke="#facc15" stroke-width="2.5" fill="none" opacity="0.9"/>
+      <!-- Glowing Blue Laser Transceiver Output -->
+      <circle cx="40" cy="40" r="3" fill="#00f0ff" filter="url(#glow)"/>
+      <circle cx="240" cy="45" r="3" fill="#00f0ff" filter="url(#glow)"/>
+      <text x="260" y="48" fill="#00f0ff" font-family="'Outfit', sans-serif" font-size="8" font-weight="700">10G SFP+ FIBER UPLINK</text>
+    </g>
+
+    <!-- UNIT 4: 2U RACKMOUNT SERVER VENTILATION GRILLE -->
+    <g transform="translate(56, 300)">
+      <rect x="0" y="0" width="408" height="100" rx="4" fill="#090f1d" stroke="#16223b" stroke-width="1.5"/>
+      <!-- Perforated Hex Grille Holes -->
+      <g fill="#00f0ff" opacity="0.15">
+        <circle cx="30" cy="30" r="2"/><circle cx="45" cy="30" r="2"/><circle cx="60" cy="30" r="2"/><circle cx="75" cy="30" r="2"/>
+        <circle cx="30" cy="50" r="2"/><circle cx="45" cy="50" r="2"/><circle cx="60" cy="50" r="2"/><circle cx="75" cy="50" r="2"/>
+        <circle cx="30" cy="70" r="2"/><circle cx="45" cy="70" r="2"/><circle cx="60" cy="70" r="2"/><circle cx="75" cy="70" r="2"/>
+      </g>
+      <!-- Hot-swap Enterprise HDD Drive Bays -->
+      <g transform="translate(110, 18)" fill="#0d172c" stroke="#1f2f4e" stroke-width="1">
+        <rect x="0" y="0" width="60" height="65" rx="3"/>
+        <rect x="68" y="0" width="60" height="65" rx="3"/>
+        <rect x="136" y="0" width="60" height="65" rx="3"/>
+        <rect x="204" y="0" width="60" height="65" rx="3"/>
+      </g>
+      <!-- Drive Activity LEDs -->
+      <circle cx="120" cy="28" r="2" fill="#10b981" filter="url(#glow)"/>
+      <circle cx="188" cy="28" r="2" fill="#10b981" filter="url(#glow)"/>
+      <circle cx="256" cy="28" r="2" fill="#10b981" filter="url(#glow)"/>
+      <circle cx="324" cy="28" r="2" fill="#10b981" filter="url(#glow)"/>
+      <text x="110" y="92" fill="#38bdf8" font-family="'Outfit', sans-serif" font-size="8" font-weight="700">RAID 10 STORAGE - ENTERPRISE DATA ARCHIVE</text>
+    </g>
+  </g>
+
+  <!-- Futuristic Holographic Telemetry Badge Overlays -->
+  <g transform="translate(30, 390)">
+    <rect x="0" y="0" width="220" height="52" rx="8" fill="rgba(6, 11, 23, 0.9)" stroke="#00f0ff" stroke-width="1" filter="url(#glow)"/>
+    <circle cx="18" cy="26" r="5" fill="#10b981" filter="url(#glow)"/>
+    <text x="32" y="22" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="11" font-weight="800">LAN &amp; RACK 42U</text>
+    <text x="32" y="38" fill="#00f0ff" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600">120 Titik Cat6 • Latensi &lt;1ms</text>
+  </g>
+
+  <g transform="translate(560, 390)">
+    <rect x="0" y="0" width="210" height="52" rx="8" fill="rgba(6, 11, 23, 0.9)" stroke="#2563eb" stroke-width="1" filter="url(#glow)"/>
+    <text x="18" y="22" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="10.5" font-weight="800">STANDAR EIA/TIA 568</text>
+    <text x="18" y="38" fill="#38bdf8" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600">Terlabel Rapi &amp; Fluke Tested</text>
+  </g>
+
+  <!-- Bottom Glowing Horizon Scanline -->
+  <rect x="0" y="495" width="800" height="5" fill="url(#electricGlow)"/>
+</svg>
