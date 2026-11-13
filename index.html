@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkyNet Solusindo - Jasa Instalasi & Setup Jaringan Komputer Surakarta</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="SkyNet Solusindo adalah penyedia jasa instalasi dan setup jaringan komputer profesional di Surakarta (Solo Raya). Layanan LAN, Fiber Optic, MikroTik, Wi-Fi Enterprise, dan troubleshooting bergaransi.">
+  <meta name="keywords"
+    content="jasa instalasi jaringan surakarta, instalasi lan solo, fiber optic solo, setting mikrotik surakarta, pasang wifi solo raya, perbaikan jaringan kantor surakarta">
+  <meta name="author" content="SkyNet Solusindo">
+  <meta name="theme-color" content="#070b14">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="SkyNet Solusindo - Solusi Jaringan Cepat, Stabil & Terpercaya">
+  <meta property="og:description"
+    content="Jasa instalasi & setup jaringan komputer profesional di Surakarta. LAN, Fiber Optic, MikroTik, Wi-Fi, dan Troubleshooting.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="id_ID">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%23070b14' stroke='%2300f0ff' stroke-width='6'/><path d='M30 65 L50 30 L70 65 Z' fill='none' stroke='%2300f0ff' stroke-width='5'/><circle cx='50' cy='30' r='6' fill='%2300f0ff'/><circle cx='30' cy='65' r='6' fill='%232563eb'/><circle cx='70' cy='65' r='6' fill='%232563eb'/><path d='M50 48 L50 75' stroke='%2338bdf8' stroke-width='4' stroke-dasharray='4 2'/></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Background Canvas for Interactive Network Nodes -->
+  <canvas id="network-canvas"></canvas>
+
+  <!-- Glowing Ambient Orbs -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="nav-logo" aria-label="SkyNet Solusindo Beranda">
+        <div class="logo-icon-wrapper">
+          <i class="fa-solid fa-network-wired"></i>
+          <span class="logo-pulse"></span>
+        </div>
+        <div class="logo-text">
+          <span class="brand-title">SkyNet</span>
+          <span class="brand-subtitle">Solusindo</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#home" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#layanan" class="nav-link">Layanan</a>
+          </li>
+          <li class="nav-item">
+            <a href="#portofolio" class="nav-link">Portofolio</a>
+          </li>
+          <li class="nav-item">
+            <a href="#tentang" class="nav-link">Tentang Kami</a>
+          </li>
+          <li class="nav-item">
+            <a href="#keunggulan" class="nav-link">Keunggulan</a>
+          </li>
+          <li class="nav-item">
+            <a href="#kontak" class="nav-link">Kontak</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Nav CTA & Mobile Toggle -->
+      <div class="nav-actions">
+        <a href="https://wa.me/6288983329828?text=Halo%20SkyNet%20Solusindo%2C%20saya%20ingin%20konsultasi%20mengenai%20instalasi%20dan%20setup%20jaringan."
+          target="_blank" rel="noopener noreferrer" class="btn btn-outline-glow btn-sm nav-cta">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>Konsultasi</span>
+        </a>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Buka navigasi menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== 1. HERO SECTION ==================== -->
+    <section class="hero-section" id="home">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span class="badge-text">Solusi IT & Jaringan Komputer #1 di Surakarta</span>
+          </div>
+
+          <h1 class="hero-title">
+            Solusi Jaringan <br>
+            <span class="gradient-text">Cepat, Stabil & Terpercaya</span>
+          </h1>
+
+          <p class="hero-description">
+            SkyNet Solusindo melayani jasa instalasi infrastruktur kabel LAN, Fiber Optic, setup Router MikroTik, Wi-Fi
+            Enterprise, hingga manajemen bandwidth untuk perkantoran, instansi pemerintah, perhotelan, pabrik, dan UMKM
+            di Solo Raya.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="https://wa.me/6288983329828?text=Halo%20SkyNet%20Solusindo%2C%20saya%20ingin%20konsultasi%20mengenai%20instalasi%20dan%20setup%20jaringan."
+              target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-glow">
+              <i class="fa-brands fa-whatsapp btn-icon"></i>
+              <span>Konsultasi Gratis</span>
+            </a>
+
+            <a href="#layanan" class="btn btn-glass">
+              <i class="fa-solid fa-list-check btn-icon"></i>
+              <span>Lihat Layanan</span>
+            </a>
+          </div>
+
+          <!-- Quick Metrics Ribbon -->
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <div class="metric-number" data-target="250">0</div>
+              <span class="metric-suffix">+</span>
+              <p class="metric-label">Proyek Selesai</p>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <div class="metric-number" data-target="99">0</div>
+              <span class="metric-suffix">.9%</span>
+              <p class="metric-label">Uptime Jaringan</p>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <div class="metric-number" data-target="10">0</div>
+              <span class="metric-suffix">+ Thn</span>
+              <p class="metric-label">Pengalaman Ahli</p>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <div class="metric-number" data-target="100">0</div>
+              <span class="metric-suffix">%</span>
+              <p class="metric-label">Garansi Layanan</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Graphic / Server Showcase -->
+        <div class="hero-visual">
+          <div class="visual-card-wrapper">
+            <div class="visual-glow-halo"></div>
+
+            <div class="visual-card">
+              <!-- Server Rack / Infrastructure Image -->
+              <div class="visual-img-container">
+                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80"
+                  alt="Infrastruktur Jaringan dan Server Rack SkyNet Solusindo" class="visual-img" loading="eager">
+                <div class="visual-overlay"></div>
+              </div>
+
+              <!-- Floating Live Telemetry Badge 1 (Top Right) -->
+              <div class="floating-badge badge-top-right">
+                <div class="badge-status-dot pulse-green"></div>
+                <div>
+                  <div class="badge-title">Server Rack 10G</div>
+                  <div class="badge-sub">Status: OPTIMAL & AKTIF</div>
+                </div>
+              </div>
+
+              <!-- Floating Live Telemetry Badge 2 (Bottom Left) -->
+              <div class="floating-badge badge-bottom-left">
+                <div class="badge-icon-blue">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div>
+                  <div class="badge-title">MikroTik RouterOS</div>
+                  <div class="badge-sub">Firewall & Failover Ready</div>
+                </div>
+              </div>
+
+              <!-- Tech Spec Strip -->
+              <div class="visual-spec-strip">
+                <div class="spec-tag"><i class="fa-solid fa-circle-check"></i> EIA/TIA 568 Standard</div>
+                <div class="spec-tag"><i class="fa-solid fa-bolt"></i> Low Latency < 1ms</div>
+                    <div class="spec-tag"><i class="fa-solid fa-location-dot"></i> Surakarta</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- ==================== 2. LAYANAN SECTION ==================== -->
+    <section class="section layanan-section" id="layanan">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-badge">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <span>LAYANAN SPESIALIS</span>
+          </div>
+          <h2 class="section-title">Solusi Lengkap Infrastruktur Jaringan</h2>
+          <p class="section-subtitle">
+            Dirancang dengan standar teknis industri tertinggi untuk menjamin kestabilan koneksi, keamanan data, dan
+            kemudahan ekspansi masa depan bisnis Anda.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Layanan 1: Instalasi Jaringan LAN -->
+          <article class="service-card" data-tilt>
+            <div class="service-card-border"></div>
+            <div class="service-card-content">
+              <div class="service-header">
+                <div class="service-icon-box">
+                  <i class="fa-solid fa-network-wired"></i>
+                </div>
+                <span class="service-number">01</span>
+              </div>
+              <h3 class="service-title">Instalasi Jaringan LAN</h3>
+              <p class="service-desc">
+                Pemasangan kabel data terstruktur (Cat6 / Cat6a) untuk kantor, gedung, pabrik, dan sekolah. Pengerjaan
+                rapi dengan trunking/duct, patch panel, dan terminasi modular.
+              </p>
+              <ul class="service-features">
+                <li><i class="fa-solid fa-check-circle"></i> Penarikan Kabel UTP/STP Cat6/Cat6a Berstandar</li>
+                <li><i class="fa-solid fa-check-circle"></i> Perakitan Server Rack 19" (Wallmount & Standing)</li>
+                <li><i class="fa-solid fa-check-circle"></i> Patch Panel & Cable Management Terstruktur</li>
+                <li><i class="fa-solid fa-check-circle"></i> Labeling Numerik & Fluke Cable Testing</li>
+              </ul>
+              <div class="service-footer">
+                <a href="https://wa.me/6288983329828?text=Halo%20SkyNet%20Solusindo%2C%20saya%20ingin%20konsultasi%20mengenai%20instalasi%20dan%20setup%20jaringan."
+                  class="service-link" target="_blank" rel="noopener noreferrer">
+                  <span>Konsultasi Layanan</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Layanan 2: Instalasi Fiber Optic -->
+          <article class="service-card" data-tilt>
+            <div class="service-card-border"></div>
+            <div class="service-card-content">
+              <div class="service-header">
+                <div class="service-icon-box">
+                  <i class="fa-solid fa-bolt-lightning"></i>
+                </div>
+                <span class="service-number">02</span>
+              </div>
+              <h3 class="service-title">Instalasi Fiber Optic</h3>
+              <p class="service-desc">
+                Solusi transmisi data super cepat dan jarak jauh bebas interferensi elektromagnetik. Melayani penarikan
+                kabel FO indoor/outdoor, terminasi OTB, dan splicing presisi tinggi.
+              </p>
+              <ul class="service-features">
+                <li><i class="fa-solid fa-check-circle"></i> Splicing Core FO Presisi (Loss Rendah &lt; 0.02 dB)</li>
+                <li><i class="fa-solid fa-check-circle"></i> Penarikan Kabel Drop Core, Aerial, & Duck Duct</li>
+                <li><i class="fa-solid fa-check-circle"></i> Perakitan OTB (Optical Termination Box) & Closure</li>
+                <li><i class="fa-solid fa-check-circle"></i> Uji Kelayakan OTDR & Optical Power Meter (OPM)</li>
+              </ul>
+              <div class="service-footer">
+                <a href="https://wa.me/6288983329828?text=Halo%20SkyNet%20Solusindo%2C%20saya%20ingin%20konsultasi%20mengenai%20instalasi%20dan%20setup%20jaringan."
+                  class="service-link" target="_blank" rel="noopener noreferrer">
+                  <span>Konsultasi Layanan</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Layanan 3: Setup Router & MikroTik -->
+          <article class="service-card" data-tilt>
+            <div class="service-card-border"></div>
+            <div class="service-card-content">
+              <div class="service-header">
+                <div class="service-icon-box">
+                  <i class="fa-solid fa-server"></i>
+                </div>
+                <span class="service-number">03</span>
+              </div>
+              <h3 class="service-title">Setup Router & MikroTik</h3>
+              <p class="service-desc">
+                Konfigurasi router MikroTik profesional untuk membagi trafik, mengamankan jaringan dari serangan siber,
+                dan memastikan koneksi internet selalu aktif tanpa henti.
+              </p>
+              <ul class="service-features">
+                <li><i class="fa-solid fa-check-circle"></i> Failover & Load Balancing Multi-ISP Otomatis</li>
+                <li><i class="fa-solid fa-check-circle"></i> Konfigurasi Firewall, NAT, Mangle, & Anti-Bruteforce</li>
+                <li><i class="fa-solid fa-check-circle"></i> Setup VPN Antar Cabang (IPsec, WireGuard, SSTP)</li>
+                <li><i class="fa-solid fa-check-circle"></i> Sistem Hotspot Billing Voucher Karyawan / Tamu</li>
+              </ul>
+              <div class="service-footer">
+                <a href="https://wa.me/6288983329828?text=Halo%20SkyNet%20Solusindo%2C%20saya%20ingin%20konsultasi%20mengenai%20instalasi%20dan%20setup%20jaringan."
+                  class="service-link" target="_blank" rel="noopener noreferrer">
+                  <span>Konsultasi Layanan</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Layanan 4: Instalasi Wi-Fi -->
+          <article class="service-card" data-tilt>
+            <div class="service-card-border"></div>
+            <div class="service-card-content">
+              <div class="service-header">
+                <div class="service-icon-box">
+                  <i class="fa-solid fa-wifi"></i>
+                </div>
+                <span class="service-number">04</span>
+              </div>
+              <h3 class="service-title">Instalasi Wi-Fi Enterprise</h3>
+              <p class="service-desc">
+                Jangkauan sinyal nirkabel tanpa celah mati (dead zone) dengan sistem Seamless Roaming. Ideal untuk
+                hotel, kafe, gedung bertingkat, rumah sakit, dan area publik.
+              </p>
+              <ul class="service-features">
+                <li><i class="fa-solid fa-check-circle"></i> Access Point Enterprise (Ubiquiti UniFi, Ruijie, TP-Link)
+                </li>
+                <li><i class="fa-solid fa-check-circle"></i> Seamless Roaming: Pindah Ruangan Tanpa Putus Sinyal</li>
+                <li><i class="fa-solid fa-check-circle"></i> Analisis Heatmap Sinyal & Interferensi Frekuensi</li>
+                <li><i class="fa-solid fa-check-circle"></i> Custom Landing Page Captive Portal & Isolasi Tamu</li>
+              </ul>
+              <div class="service-footer">
+                <a href="https://wa.me/6288983329828?text=Halo%20SkyNet%20Solusindo%2C%20saya%20ingin%20konsultasi%20mengenai%20instalasi%20dan%20setup%20jaringan."
+                  class="service-link" target="_blank" rel="noopener noreferrer">
+                  <span>Konsultasi Layanan</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Layanan 5: Manajemen Bandwidth & Troubleshooting -->
+          <article class="service-card service-card-featured" data-tilt>
+            <div class="service-card-border"></div>
+            <div class="service-card-content">
+              <div class="service-header">
+                <div class="service-icon-box">
+                  <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <span class="service-number">05</span>
+              </div>
+              <h3 class="service-title">Manajemen Bandwidth & Troubleshooting</h3>
+              <p class="service-desc">
+                Optimasi pembagian kuota internet agar adil, mencegah buffering video conference, serta investigasi dan
+                perbaikan komprehensif saat jaringan mengalami gangguan atau lemot.
+              </p>
+              <ul class="service-features">
+                <li><i class="fa-solid fa-check-circle"></i> Alokasi Bandwidth Bertingkat (Prioritas Zoom, ERP, Kasir)
+                </li>
+                <li><i class="fa-solid fa-check-circle"></i> Deteksi & Isolasi Perangkat Penguras Bandwidth</li>
+                <li><i class="fa-solid fa-check-circle"></i> Investigasi Kabel Rusak, IP Conflict, & Loop Jaringan</li>
+                <li><i class="fa-solid fa-check-circle"></i> Layanan Kontrak Maintenance & SLA Monitoring Rutin</li>
+              </ul>
+              <div class="service-footer">
+                <a href="https://wa.me/6288983329828?text=Halo%20SkyNet%20Solusindo%2C%20saya%20ingin%20konsultasi%20mengenai%20instalasi%20dan%20setup%20jaringan."
+                  class="service-link" target="_blank" rel="noopener noreferrer">
+                  <span>Konsultasi Layanan</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. PORTOFOLIO SECTION ==================== -->
+    <section class="section portofolio-section" id="portofolio">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-badge">
+            <i class="fa-solid fa-briefcase"></i>
+            <span>DOKUMENTASI PEKERJAAN</span>
+          </div>
+          <h2 class="section-title">Portofolio Proyek Nyata</h2>
+          <p class="section-subtitle">
+            Bukti nyata pengerjaan rapi, terstandar, dan berkinerja tinggi yang telah kami selesaikan di Surakarta dan
+            sekitarnya.
+          </p>
+        </div>
+
+        <div class="portfolio-grid">
+          <!-- Proyek 1 -->
+          <article class="portfolio-card">
+            <div class="portfolio-img-wrapper">
+              <img src="assets/images/lan-server-rack.jpg"
+                alt="Instalasi Jaringan LAN & Server Rack Kantor Korporat di Solo Baru" class="portfolio-img"
+                loading="lazy">
+              <div class="portfolio-badge">LAN & Server Rack</div>
+            </div>
+            <div class="portfolio-content">
+              <div class="portfolio-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Solo Baru, Sukoharjo</span>
+                <span><i class="fa-solid fa-calendar-check"></i> Selesai Tepat Waktu</span>
+              </div>
+              <h3 class="portfolio-title">Instalasi Jaringan LAN & Server Rack 42U Kantor Korporat</h3>
+              <p class="portfolio-desc">
+                Pengerjaan penarikan 120 titik kabel Cat6 Belden untuk 3 lantai kantor, integrasi patch panel modular,
+                perakitan closed rack 42U, serta labeling akurat sesuai denah kerja.
+              </p>
+              <div class="portfolio-tags">
+                <span class="tag">120 Titik LAN</span>
+                <span class="tag">Cat6 Belden</span>
+                <span class="tag">Cisco Switch</span>
+                <span class="tag">Rack 42U</span>
+              </div>
+              <div class="portfolio-result">
+                <div class="result-item">
+                  <span class="result-val">&lt; 1 ms</span>
+                  <span class="result-lbl">Latensi Internal</span>
+                </div>
+                <div class="result-item">
+                  <span class="result-val">100%</span>
+                  <span class="result-lbl">Kabel Lulus Uji</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyek 2 -->
+          <article class="portfolio-card">
+            <div class="portfolio-img-wrapper">
+              <img src="assets/images/fiber-wifi.jpg"
+                alt="Infrastruktur Fiber Optic & Wi-Fi Gedung Perhotelan Surakarta" class="portfolio-img"
+                loading="lazy">
+              <div class="portfolio-badge">Fiber Optic & Wi-Fi</div>
+            </div>
+            <div class="portfolio-content">
+              <div class="portfolio-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Jl. Slamet Riyadi, Surakarta</span>
+                <span><i class="fa-solid fa-calendar-check"></i> Selesai Tepat Waktu</span>
+              </div>
+              <h3 class="portfolio-title">Backbone Fiber Optic & Wi-Fi Enterprise Gedung Perhotelan</h3>
+              <p class="portfolio-desc">
+                Instalasi backbone fiber optic 12 core antar lantai dan pemasangan 38 unit Access Point UniFi Wi-Fi 6
+                dengan teknologi seamless roaming tanpa dead-spot di seluruh kamar & ballroom.
+              </p>
+              <div class="portfolio-tags">
+                <span class="tag">12 Core FO</span>
+                <span class="tag">38 AP UniFi</span>
+                <span class="tag">Seamless Roaming</span>
+                <span class="tag">VLAN Tamu</span>
+              </div>
+              <div class="portfolio-result">
+                <div class="result-item">
+                  <span class="result-val">10 Gbps</span>
+                  <span class="result-lbl">Backbone FO</span>
+                </div>
+                <div class="result-item">
+                  <span class="result-val">0 Dead Zone</span>
+                  <span class="result-lbl">Cover Area 100%</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyek 3 -->
+          <article class="portfolio-card">
+            <div class="portfolio-img-wrapper">
+              <img src="assets/images/mikrotik-router.jpg"
+                alt="Setup Router MikroTik & Manajemen Bandwidth Coworking Space & Cafe di Manahan Solo"
+                class="portfolio-img" loading="lazy">
+              <div class="portfolio-badge">MikroTik & Multi-WAN</div>
+            </div>
+            <div class="portfolio-content">
+              <div class="portfolio-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Manahan, Banjarsari, Surakarta</span>
+                <span><i class="fa-solid fa-calendar-check"></i> Selesai Tepat Waktu</span>
+              </div>
+              <h3 class="portfolio-title">Setup Router MikroTik & Manajemen Bandwidth Coworking Cafe</h3>
+              <p class="portfolio-desc">
+                Konfigurasi MikroTik CCR dengan integrasi Dual ISP Load Balancing PCC, failover otomatis 0 detik jika
+                salah satu ISP mati, hotspot billing voucher, dan isolasi jaringan tamu.
+              </p>
+              <div class="portfolio-tags">
+                <span class="tag">MikroTik CCR</span>
+                <span class="tag">Dual ISP Failover</span>
+                <span class="tag">Hotspot Voucher</span>
+                <span class="tag">QoS Bandwidth</span>
+              </div>
+              <div class="portfolio-result">
+                <div class="result-item">
+                  <span class="result-val">0 Detik</span>
+                  <span class="result-lbl">Waktu Failover</span>
+                </div>
+                <div class="result-item">
+                  <span class="result-val">200+ User</span>
+                  <span class="result-lbl">Concurrent Aktif</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. TENTANG KAMI SECTION ==================== -->
+    <section class="section tentang-section" id="tentang">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text-column">
+            <div class="section-badge">
+              <i class="fa-solid fa-building"></i>
+              <span>PROFIL PERUSAHAAN</span>
+            </div>
+            <h2 class="section-title">Dedikasi SkyNet Solusindo untuk Jaringan Andal di Solo Raya</h2>
+
+            <p class="about-paragraph">
+              <strong>SkyNet Solusindo</strong> adalah mitra penyedia jasa instalasi, pemeliharaan, dan optimalisasi
+              infrastruktur jaringan komputer terpercaya yang berpusat di Kota Surakarta (Solo), Jawa Tengah.
+            </p>
+            <p class="about-paragraph">
+              Kami lahir dari kebutuhan pelaku usaha, kantor swasta, sekolah, dan industri manufaktur di wilayah Solo
+              Raya akan konektivitas data yang bukan hanya cepat, tetapi juga stabil, terproteksi, dan tertata rapi
+              sesuai standar industri telekomunikasi (TIA/EIA-568).
+            </p>
+
+            <!-- Key Commitments -->
+            <div class="about-commitments">
+              <div class="commitment-item">
+                <div class="commitment-icon">
+                  <i class="fa-solid fa-award"></i>
+                </div>
+                <div>
+                  <h4 class="commitment-title">Kualitas Tanpa Kompromi</h4>
+                  <p class="commitment-desc">Hanya menggunakan material kabel, konektor, dan hardware jaringan
+                    bergaransi orisinal.</p>
+                </div>
+              </div>
+
+              <div class="commitment-item">
+                <div class="commitment-icon">
+                  <i class="fa-solid fa-user-shield"></i>
+                </div>
+                <div>
+                  <h4 class="commitment-title">Keamanan & Kerahasiaan Data</h4>
+                  <p class="commitment-desc">Konfigurasi firewall ketat dan perlindungan privasi topologi jaringan
+                    klien.</p>
+                </div>
+              </div>
+
+              <div class="commitment-item">
+                <div class="commitment-icon">
+                  <i class="fa-solid fa-map-location-dot"></i>
+                </div>
+                <div>
+                  <h4 class="commitment-title">Cakupan Luas Se-Solo Raya</h4>
+                  <p class="commitment-desc">Melayani Kota Surakarta, Sukoharjo, Karanganyar, Boyolali, Klaten, Sragen,
+                    hingga Wonogiri.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-partner-strip">
+              <span class="partner-label">Didukung Brand Hardware Terkemuka:</span>
+              <div class="partner-badges">
+                <span class="brand-chip"><i class="fa-solid fa-microchip"></i> MikroTik</span>
+                <span class="brand-chip"><i class="fa-solid fa-wifi"></i> Ubiquiti UniFi</span>
+                <span class="brand-chip"><i class="fa-solid fa-network-wired"></i> Cisco</span>
+                <span class="brand-chip"><i class="fa-solid fa-bolt"></i> Belden</span>
+                <span class="brand-chip"><i class="fa-solid fa-tower-broadcast"></i> Ruijie</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-visual-column">
+            <div class="about-image-card">
+              <img src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?auto=format&fit=crop&w=800&q=80"
+                alt="Teknisi Jaringan Komputer SkyNet Solusindo" class="about-img" loading="lazy">
+              <div class="about-badge-card">
+                <div class="stat-big">10+</div>
+                <div class="stat-text">Tahun Melayani Kebutuhan Jaringan di Surakarta</div>
+              </div>
+            </div>
+
+            <!-- Region Coverage Card -->
+            <div class="coverage-box">
+              <div class="coverage-header">
+                <i class="fa-solid fa-location-crosshairs"></i>
+                <h4>Wilayah Jangkauan Layanan Cepat:</h4>
+              </div>
+              <div class="coverage-pills">
+                <span class="pill">Kota Solo (Surakarta)</span>
+                <span class="pill">Solo Baru / Sukoharjo</span>
+                <span class="pill">Colomadu / Karanganyar</span>
+                <span class="pill">Boyolali</span>
+                <span class="pill">Klaten</span>
+                <span class="pill">Sragen</span>
+                <span class="pill">Wonogiri</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. KEUNGGULAN SECTION ==================== -->
+    <section class="section keunggulan-section" id="keunggulan">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-badge">
+            <i class="fa-solid fa-star"></i>
+            <span>MENGAPA MEMILIH KAMI</span>
+          </div>
+          <h2 class="section-title">Keunggulan Standar SkyNet Solusindo</h2>
+          <p class="section-subtitle">
+            Kami menjamin setiap proyek dieksekusi dengan presisi tinggi, tepat jadwal, rapi secara estetika, dan
+            bergaransi resmi.
+          </p>
+        </div>
+
+        <div class="advantages-grid">
+          <!-- Keunggulan 1: Teknisi Berpengalaman -->
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <i class="fa-solid fa-certificate"></i>
+            </div>
+            <h3 class="advantage-title">Teknisi Berpengalaman & Bersertifikasi</h3>
+            <p class="advantage-desc">
+              Tim lapangan kami memegang sertifikasi resmi industri (seperti MikroTik MTCNA/MTCRE dan keahlian Fiber
+              Optic Splicing). Pengalaman bertahun-tahun menangani jaringan skala kecil hingga enterprise.
+            </p>
+            <div class="advantage-tag"><i class="fa-solid fa-check"></i> Certified Engineer</div>
+          </div>
+
+          <!-- Keunggulan 2: Pengerjaan Rapi & Standar Industri -->
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <h3 class="advantage-title">Pengerjaan Rapi & Standar Industri</h3>
+            <p class="advantage-desc">
+              Kabel tidak semrawut. Setiap tarikan kabel tersusun rapi di dalam pipa conduit, tray, atau ducting kabel,
+              dilengkapi penomoran (labeling) rapi di patch panel untuk kemudahan perawatan masa depan.
+            </p>
+            <div class="advantage-tag"><i class="fa-solid fa-check"></i> Standard TIA/EIA-568</div>
+          </div>
+
+          <!-- Keunggulan 3: Dukungan Teknis Cepat & Garansi -->
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <h3 class="advantage-title">Dukungan Teknis & Garansi Resmi</h3>
+            <p class="advantage-desc">
+              Layanan kami disertai masa garansi instalasi dan pendampingan teknis. Jika terjadi kendala atau degradasi
+              kecepatan, tim kami siap bergerak cepat ke lokasi Anda di Solo Raya.
+            </p>
+            <div class="advantage-tag"><i class="fa-solid fa-check"></i> Respons Cepat 24/7</div>
+          </div>
+
+          <!-- Keunggulan 4: Komponen & Hardware Orisinal -->
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <i class="fa-solid fa-box-open"></i>
+            </div>
+            <h3 class="advantage-title">Hardware & Kabel 100% Orisinal</h3>
+            <p class="advantage-desc">
+              Bebas dari kabel tembaga campuran abal-abal yang mudah putus atau resistensi tinggi. Kami hanya
+              merekomendasikan brand orisinal bergaransi distributor resmi Indonesia.
+            </p>
+            <div class="advantage-tag"><i class="fa-solid fa-check"></i> 100% Genuine Parts</div>
+          </div>
+
+          <!-- Keunggulan 5: Survei Lokasi & RAB Transparan -->
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+            <h3 class="advantage-title">Survei Lokasi & RAB Transparan</h3>
+            <p class="advantage-desc">
+              Kami siap melakukan survei denah lokasi di Surakarta. Anda akan menerima Rencana Anggaran Biaya (RAB)
+              terperinci tanpa biaya tersembunyi, disesuaikan dengan anggaran Anda.
+            </p>
+            <div class="advantage-tag"><i class="fa-solid fa-check"></i> Estimasi Jelas</div>
+          </div>
+
+          <!-- Keunggulan 6: Optimasi Kecepatan Maksimal -->
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <i class="fa-solid fa-gauge-high"></i>
+            </div>
+            <h3 class="advantage-title">Optimasi Kecepatan & Latensi Rendah</h3>
+            <p class="advantage-desc">
+              Bukan sekadar pasang kabel, kami melakukan tuning parameter MTU, DNS, firewall bypass, dan QoS bandwidth
+              sehingga pemanfaatan internet kantor Anda 100% optimal.
+            </p>
+            <div class="advantage-tag"><i class="fa-solid fa-check"></i> High Performance</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. KONTAK SECTION ==================== -->
+    <section class="section kontak-section" id="kontak">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-badge">
+            <i class="fa-solid fa-comments"></i>
+            <span>HUBUNGI KAMI</span>
+          </div>
+          <h2 class="section-title">Konsultasikan Kebutuhan Jaringan Anda</h2>
+          <p class="section-subtitle">
+            Siap tingkatkan stabilitas dan kecepatan jaringan bisnis Anda? Diskusikan dengan tim teknis SkyNet Solusindo
+            di Surakarta sekarang juga.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Information Card -->
+          <div class="contact-info-panel">
+            <h3 class="panel-title">Informasi Kantor & Kontak</h3>
+            <p class="panel-desc">
+              Kantor operasional kami berlokasi strategis di pusat Kota Surakarta, siap menjangkau seluruh kawasan Solo
+              Raya dengan cepat.
+            </p>
+
+            <div class="contact-items-list">
+              <!-- Alamat -->
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="contact-detail">
+                  <span class="detail-label">Lokasi Kantor:</span>
+                  <span class="detail-value">
+                    Jl. Slamet Riyadi No. 348, Sriwedari, Kec. Laweyan, Kota Surakarta, Jawa Tengah 57141
+                  </span>
+                </div>
+              </div>
+
+              <!-- WhatsApp & Telepon -->
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="contact-detail">
+                  <span class="detail-label">WhatsApp & Telepon:</span>
+                  <a href="https://wa.me/6288983329828?text=Halo%20SkyNet%20Solusindo%2C%20saya%20ingin%20konsultasi%20mengenai%20instalasi%20dan%20setup%20jaringan."
+                    class="detail-value text-highlight" target="_blank" rel="noopener noreferrer">
+                    +62 889-8332-9828 (Respon Cepat)
+                  </a>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="contact-detail">
+                  <span class="detail-label">Email Resmi:</span>
+                  <a href="mailto:halo@skynetsolusindo.com" class="detail-value">
+                    halo@skynetsolusindo.com
+                  </a>
+                </div>
+              </div>
+
+              <!-- Jam Kerja -->
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fa-solid fa-clock"></i>
+                </div>
+                <div class="contact-detail">
+                  <span class="detail-label">Jam Operasional:</span>
+                  <span class="detail-value">
+                    Senin - Sabtu: 08:00 - 18:00 WIB<br>
+                    <small class="text-muted">Layanan Darurat Gangguan Jaringan: Siaga On-Call 24 Jam</small>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- WhatsApp Direct CTA Banner -->
+            <div class="direct-wa-box">
+              <div class="wa-box-header">
+                <i class="fa-brands fa-whatsapp wa-big-icon"></i>
+                <div>
+                  <h4>Konsultasi Instan via WhatsApp</h4>
+                  <p>Klik tombol di bawah untuk terhubung langsung dengan teknisi kami:</p>
+                </div>
+              </div>
+              <a href="https://wa.me/6288983329828?text=Halo%20SkyNet%20Solusindo%2C%20saya%20ingin%20konsultasi%20mengenai%20instalasi%20dan%20setup%20jaringan."
+                target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-full">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>Halo SkyNet Solusindo, saya ingin konsultasi mengenai instalasi dan setup jaringan.</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Consultation Request Form -->
+          <div class="contact-form-panel">
+            <h3 class="panel-title">Formulir Permintaan Penawaran & Survei</h3>
+            <p class="panel-desc">
+              Isi data di bawah ini, lalu klik kirim untuk langsung tersambung ke WhatsApp kami dengan format pesan
+              otomatis.
+            </p>
+
+            <form id="consultation-form" class="consultation-form">
+              <div class="form-group">
+                <label for="client-name">Nama Lengkap / Perusahaan <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-user input-icon"></i>
+                  <input type="text" id="client-name" name="client-name"
+                    placeholder="Contoh: Bpk. Hendra / PT Maju Solo" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="client-phone">No. WhatsApp <span class="required">*</span></label>
+                  <div class="input-wrapper">
+                    <i class="fa-brands fa-whatsapp input-icon"></i>
+                    <input type="tel" id="client-phone" name="client-phone" placeholder="0812xxxxxxx" required>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="client-location">Lokasi Proyek di Solo Raya <span class="required">*</span></label>
+                  <div class="input-wrapper">
+                    <i class="fa-solid fa-location-dot input-icon"></i>
+                    <input type="text" id="client-location" name="client-location" placeholder="Contoh: Jebres, Solo"
+                      required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="client-service">Pilih Layanan Utama <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-list-check input-icon"></i>
+                  <select id="client-service" name="client-service" required>
+                    <option value="" disabled selected>-- Pilih Layanan yang Dibutuhkan --</option>
+                    <option value="Instalasi Jaringan LAN (Kabel Data / Rack)">Instalasi Jaringan LAN (Kabel Data /
+                      Rack)</option>
+                    <option value="Instalasi & Splicing Fiber Optic">Instalasi & Splicing Fiber Optic</option>
+                    <option value="Setup Router MikroTik & Failover Multi-ISP">Setup Router MikroTik & Failover
+                      Multi-ISP</option>
+                    <option value="Instalasi & Seamless Roaming Wi-Fi Enterprise">Instalasi & Seamless Roaming Wi-Fi
+                      Enterprise</option>
+                    <option value="Manajemen Bandwidth & Troubleshooting Jaringan">Manajemen Bandwidth & Troubleshooting
+                      Jaringan</option>
+                    <option value="Paket Lengkap & Survei Lokasi Baru">Paket Lengkap & Survei Lokasi Baru</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="client-notes">Deskripsi Singkat Kebutuhan / Kendala</label>
+                <div class="input-wrapper textarea-wrapper">
+                  <i class="fa-solid fa-comment-dots input-icon"></i>
+                  <textarea id="client-notes" name="client-notes" rows="3"
+                    placeholder="Contoh: Kantor 2 lantai butuh penarikan 30 titik LAN Cat6 dan pasang 4 unit Wi-Fi UniFi..."></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full btn-glow">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>Kirim Permintaan ke WhatsApp Kami</span>
+              </button>
+
+              <div class="form-privacy-note">
+                <i class="fa-solid fa-lock"></i>
+                <span>Data Anda aman dan hanya digunakan untuk keperluan koordinasi survei teknis.</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== 7. FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-grid">
+        <!-- Brand Info -->
+        <div class="footer-col brand-col">
+          <a href="#home" class="nav-logo footer-logo">
+            <div class="logo-icon-wrapper">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <div class="logo-text">
+              <span class="brand-title">SkyNet</span>
+              <span class="brand-subtitle">Solusindo</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Penyedia spesialis jasa instalasi, konfigurasi, dan pemeliharaan infrastruktur jaringan komputer di
+            Surakarta & Solo Raya. Kualitas rapi, stabil, dan berstandar industri modern.
+          </p>
+          <div class="footer-socials">
+            <a href="https://wa.me/6288983329828?text=Halo%20SkyNet%20Solusindo%2C%20saya%20ingin%20konsultasi%20mengenai%20instalasi%20dan%20setup%20jaringan."
+              target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="mailto:halo@skynetsolusindo.com" class="social-btn" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="#home" class="social-btn" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="#home" class="social-btn" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Navigasi Cepat</h4>
+          <ul class="footer-links">
+            <li><a href="#home"><i class="fa-solid fa-angle-right"></i> Beranda</a></li>
+            <li><a href="#layanan"><i class="fa-solid fa-angle-right"></i> Layanan Jaringan</a></li>
+            <li><a href="#portofolio"><i class="fa-solid fa-angle-right"></i> Portofolio Proyek</a></li>
+            <li><a href="#tentang"><i class="fa-solid fa-angle-right"></i> Tentang Kami</a></li>
+            <li><a href="#keunggulan"><i class="fa-solid fa-angle-right"></i> Keunggulan</a></li>
+            <li><a href="#kontak"><i class="fa-solid fa-angle-right"></i> Kontak & Survei</a></li>
+          </ul>
+        </div>
+
+        <!-- Services Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Layanan Unggulan</h4>
+          <ul class="footer-links">
+            <li><a href="#layanan"><i class="fa-solid fa-angle-right"></i> Instalasi Jaringan LAN</a></li>
+            <li><a href="#layanan"><i class="fa-solid fa-angle-right"></i> Instalasi Fiber Optic (FO)</a></li>
+            <li><a href="#layanan"><i class="fa-solid fa-angle-right"></i> Setup Router & MikroTik</a></li>
+            <li><a href="#layanan"><i class="fa-solid fa-angle-right"></i> Instalasi Wi-Fi Enterprise</a></li>
+            <li><a href="#layanan"><i class="fa-solid fa-angle-right"></i> Manajemen Bandwidth QoS</a></li>
+            <li><a href="#layanan"><i class="fa-solid fa-angle-right"></i> Troubleshooting & SLA</a></li>
+          </ul>
+        </div>
+
+        <!-- Location & Operation -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Kantor Surakarta</h4>
+          <p class="footer-contact-line">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Jl. Slamet Riyadi No. 348, Sriwedari, Laweyan, Surakarta, Jawa Tengah 57141</span>
+          </p>
+          <p class="footer-contact-line">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>+62 889-8332-9828</span>
+          </p>
+          <p class="footer-contact-line">
+            <i class="fa-solid fa-envelope"></i>
+            <span>halo@skynetsolusindo.com</span>
+          </p>
+          <div class="service-badge-pill">
+            <i class="fa-solid fa-shield-halved"></i> Melayani Seluruh Wilayah Solo Raya
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Copyright -->
+      <div class="footer-bottom">
+        <div class="copyright-text">
+          &copy; 2026 <strong>SkyNet Solusindo</strong>. Hak Cipta Dilindungi Undang-Undang. Jasa Instalasi Jaringan
+          Komputer Surakarta.
+        </div>
+        <div class="footer-bottom-links">
+          <span>Keamanan Terjamin</span>
+          <span>&bull;</span>
+          <span>Pengerjaan Standar Industri</span>
+          <span>&bull;</span>
+          <a href="#home" class="back-to-top-text">Kembali ke Atas <i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING WHATSAPP BUTTON ==================== -->
+  <a href="https://wa.me/6288983329828?text=Halo%20SkyNet%20Solusindo%2C%20saya%20ingin%20konsultasi%20mengenai%20instalasi%20dan%20setup%20jaringan."
+    target="_blank" rel="noopener noreferrer" class="floating-wa" id="floating-wa"
+    aria-label="Chat Konsultasi WhatsApp SkyNet Solusindo">
+    <div class="floating-wa-ripple"></div>
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="floating-wa-tooltip">Konsultasi Gratis via WA</span>
+  </a>
+
+  <!-- ==================== BACK TO TOP BUTTON ==================== -->
+  <button class="back-to-top" id="back-to-top" aria-label="Scroll kembali ke atas">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- JavaScript File -->
+  <script src="script.js"></script>
+</body>
+
+</html>
